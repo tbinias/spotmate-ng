@@ -1,0 +1,20 @@
+<div class="page-header">
+	<h2>Search locations</h2>
+</div>
+
+<form name="locationSearchForm" ng-submit="doSearch()" class="form-vertical">
+
+	<div class="input-group">			
+			<input type="text" class="form-control" id="query" ng-model="search.query" placeholder="Location ..."/>
+			<span class="input-group-btn">
+				<button type="submit" class="btn btn-default">Go</button>
+			</span>		
+	</div>
+	
+	<div class="list-group, searchresult">
+		<a ng-href="#/weatherforecast/{{location.id}}" ng-repeat="location in search.result | orderBy: ['name', 'providerName']" class="list-group-item">
+			<h4 class="list-group-item-heading">#{{$index + 1}} {{location.name}}</h4>
+			<p>Provider: {{location.providerName}}</p>
+		</a>
+	</div>
+</form>

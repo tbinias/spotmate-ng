@@ -1,0 +1,24 @@
+<div class="page-header">
+		<div class="right">
+			<a class="btn btn-default" ng-href="#/createSpot"><span class="glyphicon glyphicon-plus"></span></a>
+		</div>
+
+		<div>
+			<h2>Spots</h2>
+		</div>	
+		<div class="clearfix"></div>
+</div>
+
+<div class="list-group" ng-show="spots">
+	<a ng-href="#/spot/{{spot.id}}" ng-repeat="spot in spots | orderBy:'name'" class="list-group-item">
+		<div style="float: right;">		
+			<spotmate-spot-ranking spot-id="spot.id"></spotmate-spot-ranking>
+		</div>
+		<div>
+			<h4 class="list-group-item-heading">#{{$index + 1}} {{spot.name}}</h4>
+		</div>
+		
+	
+		<div class="clearfix"></div>
+	</a>
+</div>

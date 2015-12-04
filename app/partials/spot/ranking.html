@@ -1,0 +1,40 @@
+<div style="width: 380px; height:120px; overflow: hidden">
+	<div ng-hide="vm.rankings" style="text-align:center">
+		Loading ...
+	</div>
+	<div ng-show="vm.rankings">
+		<div style="float:left; margin-left: 5px" ng-repeat="(key, value) in vm.rankings | orderBy:'time' | groupBy: 'day'">	
+			<div>{{key}}</div>
+			<table>
+				<tr>
+					<td style="padding: 2px; border: 1px solid grey" align="center" ng-repeat="rank in value | orderBy:'time'" >
+						{{rank.time | date : 'HH'}}h
+					</td>
+				</tr>
+				<tr>
+					<td style="padding: 2px; border: 1px solid grey" align="center" ng-repeat="rank in value | orderBy:'time'">
+						<div style="background-color: hsl({{250-(rank.avgWindSpeed * 6)}},100%,45%);">
+							{{rank.avgWindSpeed}}
+						</div>
+						<div style="width:100%; transform: rotate({{rank.avgWindDir}}deg); -webkit-transform: rotate({{rank.avgWindDir}}deg); -ms-transform: rotate({{rank.avgWindDir}}deg);">
+								<img src="icons/arrow_down.png">
+						</div>
+					</td>
+				</tr>
+				<tr ng-show="vm.debug">
+					<td style="padding: 2px; border: 1px solid grey" align="center" ng-repeat="rank in value | orderBy:'time'" >
+						{{rank.score}}
+					</td>
+				</tr>
+				<tr>
+					<td style="padding: 2px; border: 1px solid grey" align="center" colspan="4">
+	 					<div spotmate-star-rating rating-value="vm.rating[key]" max="vm.ratingMax" ></div>
+					</td>
+				</tr>						
+			</table>	
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+
+

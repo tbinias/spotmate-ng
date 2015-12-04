@@ -1,0 +1,75 @@
+<div>	
+	<div style="float:right">
+		<b>Issued: </b>{{vm.issued}}
+	</div>
+	<div class="clearfix"></div>
+	<div class="forecast-day" ng-repeat="(key, value) in vm.weatherForecast.forecasts | groupBy: 'day'">
+		<b>{{key}}</b>
+		<table style="width:100%; table-layout: fixed;">
+			<tr>
+				<td class="forecast-label">Time</td>
+				<td class="forecast-value forecast-headline" align="center" ng-repeat="forecast in value | orderBy:'time'" >
+					{{forecast.time | date : 'HH'}}h
+				</td>
+			</tr>
+			<tr>
+				<td class="forecast-label">WindAvg</td>
+				<td class="forecast-value" align="center" ng-repeat="forecast in value | orderBy:'time'">
+					<div style="height: 70px; position:relative">
+						{{forecast.windAvg}}
+						<div style="z-index: -10; position:absolute; bottom: 0; width: 100%; background-color: hsl({{250-(forecast.windAvg * 6)}},100%,45%); height: {{forecast.windAvg * 2}}px">							
+						</div>						
+					</div>
+					
+				</td>
+			</tr>
+			<tr>
+				<td class="forecast-label">WindGust</td>
+				<td class="forecast-value" align="center" ng-repeat="forecast in value | orderBy:'time'">
+					<div style="background-color: hsl({{250-(forecast.windGust * 6)}},100%,45%)">
+						{{forecast.windGust}}					
+					</div>
+					
+				</td>
+			</tr>			
+			<tr>
+				<td class="forecast-label">WindDir</td>
+				<td style="border: 1px solid grey; height: 60px;" align="center" ng-repeat="forecast in value | orderBy:'time'">
+					<div style="width:100%; transform: rotate({{forecast.windDirection}}deg); -webkit-transform: rotate({{forecast.windDirection}}deg); -ms-transform: rotate({{forecast.windDirection}}deg);">
+						<img src="icons/arrow_down.png">
+					</div>
+					{{forecast.windDirection}}
+				</td>
+			</tr>
+			<tr>
+				<td class="forecast-label">Temp.</td>
+				<td class="forecast-value" align="center" ng-repeat="forecast in value | orderBy:'time'">
+					{{forecast.temperature}}
+				</td>
+			</tr>
+			<tr ng-show="vm.weatherForecast.hasCloudCoverageInfo">
+				<td class="forecast-label">Sky</td>
+				<td class="forecast-value" align="center" ng-repeat="forecast in value | orderBy:'time'">
+					<img ng-show="getWeatherIconURL(forecast)" width="24" ng-src="{{getWeatherIconURL(forecast)}}">
+				</td>
+			</tr>			
+			<tr>
+				<td class="forecast-label">Rain</td>
+				<td class="forecast-value" align="center" ng-repeat="forecast in value | orderBy:'time'">
+					<div style="background-color: {{getPrecipitationBackgroundColor(forecast)}}">
+						{{forecast.precipitation | number : 1}}											
+					</div>									
+				</td>
+			</tr>
+			<tr ng-show="vm.tideChart.show">
+				<td class="forecast-label">Tide</td>
+				<td style="border: 1px solid grey;" colspan="24" align="center">
+					<div ng-show="vm.tideChart.show" style="margin: 5px">
+						<canvas ng-attr-id="{{'tideChart_' + key}}" class="chart chart-line" data="vm.tideChart.data[key]" labels="vm.tideChart.labels[key]" legend="false" series="vm.tideChart.series" options="vm.tideChart.options">
+						</canvas> 						
+					</div>														
+				</td>
+			</tr>						
+		</table>
+	</div>		
+</div>

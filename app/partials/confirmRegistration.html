@@ -1,0 +1,10 @@
+<div class="page-header">
+	<h2>Confirm registration</h2>
+</div>
+
+<div ng-show="result">
+	{{result.message}}	
+	<div ng-show="result.isApproved">
+		<a ng-href="#/login">Login</a>
+	</div>
+</div>

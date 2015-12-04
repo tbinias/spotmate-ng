@@ -1,0 +1,11 @@
+require("./ConfirmRegistrationController.js");
+require("./CreateSpotController.js");
+require("./EditSpotController.js");
+require("./LocationSearchController.js");
+require("./LoginController.js");
+require("./NavController.js");
+require("./RegistrationController.js");
+require("./SpotController.js");
+require("./SpotFormController.js");
+require("./SpotsController.js");
+require("./WeatherForecastController.js");

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
+
+	<title>SpotMate</title>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
+
+    <script type="text/javascript" src="bundle.js"></script>
+
+</head>
+
+<body ng-app="SpotMate">
+    <nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="NavController">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#/">SpotMate</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+          	<li ng-repeat="entry in nav" ng-class="{active: activeNav(entry)}" ng-show="isPermitted(entry)"><a href="#{{entry.path}}">{{entry.name}}</a></li>
+          </ul>
+          <div style="float:right; color:white" >
+          	<ul class="nav navbar-nav">
+        	 	<li><a href="#/login" ng-hide="isLoggedIn()">Login</a></li>
+        	 	<li><a href="#/login" ng-click="logout()" ng-show="isLoggedIn()">Logout</a></li>
+        	</ul>
+          </div>
+          <div class="clearfix"></div>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+	<div class="container, spotmate">
+<!-- 	    <div cg-busy="{promise:globalVM.promise,templateUrl:'partials/busy-indicator.html'}" ng-view></div> -->
+       <div ng-view></div>
+	</div>
+</body>
+</html>

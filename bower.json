@@ -1,0 +1,27 @@
+{
+  "name": "spotmate",
+  "version": "0.0.0",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "~1.4.1",
+    "angular-base64": "~2.0.5",
+    "angular-bootstrap": "~0.13.1",
+    "angular-cookies": "~1.4.1",
+    "angular-resource": "~1.4.1",
+    "angular-route": "~1.4.1",
+    "angularjs": "~1.4.1",
+    "bootstrap": "~3.3.5",
+    "jquery-lcn-circle-range-select": "https://github.com/tbinias/jQuery-Lcn-Circle-Range-Select.git#2.1.0",
+    "ng-fab-form": "~1.2.11",
+    "angular-busy": "~4.1.3",
+    "ng-file-upload": "~7.0.6",
+    "angular-chart.js": "~0.8.6"
+  }
+}
