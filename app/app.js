@@ -3,7 +3,10 @@
 require("angular");
 require("angular-resource");
 require("angular-route");
+
 require("angular-chart.js");
+require("angular-chart.js/dist/angular-chart.css");
+
 require("angular-filter");
 require("angular-base64");
 require("angular-animate");
