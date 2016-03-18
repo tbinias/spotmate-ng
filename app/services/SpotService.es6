@@ -68,14 +68,14 @@ class SpotService {
             }
         }
 
-        function findTideForecast(locationsIterator, defer) {
+        function findTideForecast(forecastService, locationsIterator, defer) {
             var nextValue = locationsIterator.next();
             if (!nextValue.done) {
-                this.forecastService.getTideForecast(nextValue.value.providerId, nextValue.value.locationId).then(function(tideForecast) {
+                forecastService.getTideForecast(nextValue.value.providerId, nextValue.value.locationId).then(function(tideForecast) {
                     console.log("retrieved tideForecast from '" + nextValue.value.providerId + "' - '" + nextValue.value.locationId);
                     defer.resolve(tideForecast);
                 }, function(errorResult) {
-                    findTideForecast(locationsIterator, defer);
+                    findTideForecast(forecastService, locationsIterator, defer);
                 });
             } else {
                 defer.reject("No spot location can provide a tide forecast");
@@ -85,13 +85,14 @@ class SpotService {
         var defer = this.$q.defer();
 
         if (preferedLocation) {
+            let self = this;
             this.forecastService.getTideForecast(preferedLocation.providerId, preferedLocation.locationId).then(function(tideForecast) {
                 console.log("retrieved tideForecast from prefered location '" + preferedLocation.providerId + "' - '" + preferedLocation.locationId);
                 defer.resolve(tideForecast);
             },
             function(errorResult) {
                 var locationsIterator = makeIterator(spot._embedded.locations);
-                findTideForecast(locationsIterator, defer);
+                findTideForecast(self.forecastService, locationsIterator, defer);
             });
         }
 
