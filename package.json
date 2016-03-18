@@ -15,7 +15,6 @@
     "angular-messages": "1.4.8",
     "angular-resource": "1.4.8",
     "angular-route": "1.4.8",
-
     "bootstrap": "3.3.6",
     "chart.js": "1.0.2",
     "jquery-lcn-circle-range-select": "git+https://github.com/tbinias/jQuery-Lcn-Circle-Range-Select.git#2.1.0",
@@ -30,7 +29,8 @@
     "css-loader": "0.23.0",
     "babel-core": "^5.6.17",
     "babel-loader": "^5.3.1",
-    "babel-plugin-object-assign": "^1.2.1"
+    "babel-plugin-object-assign": "^1.2.1",
+    "html-loader": "^0.4.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
