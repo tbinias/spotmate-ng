@@ -4,7 +4,8 @@ var webpack = require("webpack");
 
 module.exports = {
         entry: {
-            app: "./app/app.js"
+            //app: "./app/app.js",
+            "SpotMate": "./app/index.es6"
         },
         devServer: {
             contentBase: "./app",
@@ -16,7 +17,8 @@ module.exports = {
             }
         },
         resolve: {
-            root: ["", path.join(__dirname, "node_modules")]
+            root: ["", path.join(__dirname, "node_modules")],
+            extensions: ['', '.js', '.es6']
         },
         plugins: [
         ],
@@ -27,14 +29,28 @@ module.exports = {
         module: {
             loaders: [
                 {
-                    test: /\.css$/i,
-                    loader: 'style-loader!css-loader'
+                    test: /\.es6$/,
+                    loader: "babel-loader",
+                    query: {
+                        plugins: ['object-assign']
+                    }
                 },
                 {
                     test: /\.html$/,
-                    loader: 'html-loader'
+                    loader: "html-loader"
+                },
+                {
+                    test: /\.scss$/,
+                    loader: "style!css!sass?sourceMap"
+                },
+                {
+                    test: /\.css$/,
+                    loader: "style!css"
+                },
+                {
+                    test: /\.(png|jpg|svg)$/,
+                    loader: 'url-loader?limit=8192'
                 }
-
             ]
         },
 }
