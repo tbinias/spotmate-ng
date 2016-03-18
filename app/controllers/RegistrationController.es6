@@ -1,13 +1,11 @@
-(function() {
-	'use strict';	
-	
-	angular
-		.module("SpotMate")
-		.controller("RegistrationController", [ '$rootScope', '$scope', '$resource', '$location', RegistrationController]);
-	
-	
-	function RegistrationController($rootScope, $scope, $resource, $location) {
-		
+'use strict';
+
+import app from '../SpotMateApp.es6';
+
+class RegistrationController {
+
+    constructor($rootScope, $scope, $resource, $location) {
+
 		$scope.vm = {
 				showForm: true
 		};
@@ -21,26 +19,28 @@
 						email: $scope.email,
 						password: $scope.password,
 						confirmationURL: basePath + "confirmRegistration"
-					}, 
+					},
 					function() {
 						$scope.vm.showForm = false;
 						$scope.vm.alert = {
 								type: "INFO",
 								title: "Thanks for your registration",
 								message: "You will recieve an email to confirm your account soon."
-						};										
+						};
 					},
-					function(result) {			
+					function(result) {
 						$scope.vm.showForm = true;
 						$scope.vm.alert = {
 								type: "ERROR",
-								title: "Registration request failed"								
+								title: "Registration request failed"
 						};
 						if (result && result.data && result.data.message) {
 							$scope.vm.alert.message = result.data.message;
 						}
 					});
-		}	
+		}
 	}
 
-})();
+}
+
+app.controller("RegistrationController", [ '$rootScope', '$scope', '$resource', '$location', RegistrationController]);

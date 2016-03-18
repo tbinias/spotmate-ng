@@ -1,13 +1,10 @@
-(function() {
+'use strict';
 
-	'use strict';
+import app from '../SpotMateApp.es6';
 
+class SpotFormController {
 
-	angular
-		.module("SpotMate")
-		.controller("SpotFormController", [ '$rootScope', '$scope', '$http', '$resource', '$location', 'FileReader', SpotFormController]);
-
-	function SpotFormController($rootScope, $scope, $http, $resource, $location, FileReader) {
+    constructor($rootScope, $scope, $http, $resource, $location, FileReader) {
 		$scope.vm = {
 				mode: "create",
 				spot: {
@@ -206,5 +203,7 @@
 //	        });
 	    }
 	}
+}
 
-})();
+app.controller("SpotFormController", [ '$rootScope', '$scope', '$http', '$resource',
+    '$location', 'FileReader', SpotFormController]);

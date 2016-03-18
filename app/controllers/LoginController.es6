@@ -1,18 +1,17 @@
-(function() {	
-	'use strict';	
-	
-	angular
-		.module("SpotMate")
-		.controller("LoginController", [ '$rootScope', '$scope', '$location', 'UserService', LoginController]);		
-	
-	function LoginController($rootScope, $scope, $location, UserService) {
-		
+'use strict';
+
+import app from '../SpotMateApp.es6';
+
+class LoginController {
+
+    constructor($rootScope, $scope, $location, UserService) {
+
 		$scope.vm = {};
 		$scope.login = function() {
 			$rootScope.globalVM.promise = UserService.login($scope.username, $scope.password).then(function(msg) {
 				delete($scope.vm.alert);
 				$location.path("/");
-			}, function(msg) {				
+			}, function(msg) {
 				$scope.vm.alert = {
 						type: "ERROR",
 						title: "Login error",
@@ -20,6 +19,8 @@
 				};
 			});
 		};
-	};
-	
-})();
+	}
+
+}
+
+app.controller("LoginController", [ '$rootScope', '$scope', '$location', 'UserService', LoginController]);

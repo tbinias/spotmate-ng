@@ -49,8 +49,7 @@ export default angular.module('SpotMate', [ 'ngResource', 'ngRoute', 'chart.js',
             controller : 'SpotsController',
             name : "Spots"
         }).when('/createSpot', {
-            templateUrl : 'partials/spot/create.html',
-            controller : 'CreateSpotController',
+            templateUrl : 'partials/spot/create.html'
         }).when('/spot/:spotId', {
             templateUrl : 'partials/spot/view.html',
             controller : 'SpotController'
