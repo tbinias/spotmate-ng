@@ -13,6 +13,10 @@ module.exports = {
                 '/resources*': {
                     target: 'https://spotmate.binias-online.de/spotmate',
                     secure: false
+                },
+                '/spotmate/resources*': {
+                    target: 'https://spotmate.binias-online.de',
+                    secure: false
                 }
             }
         },
@@ -53,4 +57,5 @@ module.exports = {
                 }
             ]
         },
+        devtool: 'source-map'
 }
