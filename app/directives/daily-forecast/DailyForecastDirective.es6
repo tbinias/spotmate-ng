@@ -15,9 +15,9 @@ app.directive('spotmateDailyForecast', function DailyForecastDirective() {
             spot: '='
         },
         link: function(scope, element, attrs, controller) {
-            scope.$watch('location', function() {
+            scope.$watch('location', function(location) {
                 if (angular.isDefined(location) && location !== null) {
-                    controller.retrieveForecast(scope.location, scope.spot);
+                    controller.retrieveForecast(location, scope.spot);
                 }
             });
         }

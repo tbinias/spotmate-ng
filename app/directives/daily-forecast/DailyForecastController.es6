@@ -2,8 +2,6 @@
 
 import angular from 'angular';
 
-var self = null;
-
 class DailyForecastController {
 
     constructor($rootScope, $scope, $filter, $timeout, forecastService, spotService) {
@@ -13,7 +11,6 @@ class DailyForecastController {
         this.$timeout = $timeout;
         this.forecastService = forecastService;
         this.spotService = spotService;
-        self = this;
 
         this.initScope($scope);
     }
@@ -37,8 +34,9 @@ class DailyForecastController {
     }
 
     retrieveForecast(location, spot) {
-        self.$rootScope.globalVM.promise =
-            self.forecastService.getWeatherForecast(location.providerId, location.locationId)
+        let self = this;
+        this.$rootScope.globalVM.promise =
+            this.forecastService.getWeatherForecast(location.providerId, location.locationId)
             .then(function(forecast) {
                 self.$scope.vm.weatherForecast = forecast;
                 if (forecast.issueTime) {
@@ -53,13 +51,13 @@ class DailyForecastController {
 
         var tideProvider = null;
         if (angular.isDefined(spot)) {
-            tideProvider = self.spotService.getTideForecast(spot, location);
+            tideProvider = this.spotService.getTideForecast(spot, location);
         } else {
-            tideProvider = self.forecastService.getTideForecast(location.providerId, location.locationId);
+            tideProvider = this.forecastService.getTideForecast(location.providerId, location.locationId);
         }
 
-        self.$scope.vm.tideChart.show = true;
-        self.$timeout(function() {
+        this.$scope.vm.tideChart.show = true;
+        this.$timeout(function() {
             tideProvider.then(function(tideForecast) {
                 self.$scope.vm.tideChart.labels = {};
                 self.$scope.vm.tideChart.data = {};
@@ -70,19 +68,19 @@ class DailyForecastController {
                     }
                 }
             }, function(errorResult) {
-                self.clearTideChart();
+                self.clearTideChart(self.$scope);
             });
         });
     }
 
-    clearTideChart() {
-        self.$scope.vm.tideChart.show = false;
-        self.$scope.vm.tideChart.data = {};
-        self.$scope.vm.tideChart.labels = {};
+    clearTideChart(scope) {
+        scope.vm.tideChart.show = false;
+        scope.vm.tideChart.data = {};
+        scope.vm.tideChart.labels = {};
     }
 
     getWeatherIconURL(weatherForecast) {
-        return self.forecastService.getWeatherIconURL(weatherForecast);
+        return this.forecastService.getWeatherIconURL(weatherForecast);
     }
 
     getPrecipitationBackgroundColor(forecast) {
