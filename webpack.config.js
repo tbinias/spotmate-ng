@@ -19,9 +19,6 @@ module.exports = {
             root: ["", path.join(__dirname, "node_modules")]
         },
         plugins: [
-          new webpack.ResolverPlugin(
-              new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
-          )
         ],
         externals: {
             angular: "angular",
