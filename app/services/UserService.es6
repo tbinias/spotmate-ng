@@ -2,7 +2,7 @@
 
 import app from '../SpotMateApp.es6';
 
-import './ForecastService.es6';
+//import './ForecastService.es6';
 
 class UserService {
 
