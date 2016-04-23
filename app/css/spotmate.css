@@ -1,25 +1,53 @@
 body {
-  
+
 }
 
-.spotmate {  
+.spotmate {
   margin-left: auto;
   margin-right: auto;
-  width: 932px;
+  max-width: 932px;
   margin-top: 50px;
 }
 
-.spotmate .page-header {  
+.spotmate .page {
+    margin: 10px;
+}
+
+.spotmate-ranking {
+    width: 380px;
+    height:120px;
+    overflow: hidden;
+}
+
+.spotmate-ranking .rank {
+    float:left;
+    margin-left: 5px;
+}
+
+@media (max-width: 35em) {
+    .spotmate-ranking {
+        width: auto;
+        height: auto;
+        overflow: auto;
+    }
+
+    .spotmate-ranking .rank {
+        float: none;
+    }
+
+}
+
+.spotmate .page-header {
   padding-top: 50px;
 }
 
 .page-header .right {
-	float:right; 
+	float:right;
 	padding-top: 22px;
 }
 
 .forecast-day {
-	padding-top: 10px;	
+	padding-top: 10px;
 }
 
 .forecast-day td.forecast-label {
@@ -29,13 +57,13 @@ body {
 }
 
 .forecast-day td.forecast-value {
-	width: 35px;	
-	padding: 1px; 
+	width: 35px;
+	padding: 1px;
 	border: 1px solid grey;
 }
 
 .forecast-day td.forecast-headline {
-	padding: 5px; 
+	padding: 5px;
 }
 
 .forecast-day td.forecast-winddir {
@@ -43,7 +71,7 @@ body {
 }
 
 .searchresult {
-	padding-top: 10px;	
+	padding-top: 10px;
 }
 
 .rating {
@@ -103,9 +131,9 @@ ul.rating {
   text-align: center;
   border-radius: 36px;
   color: #62b14c;
-  transition: all ease-out 0.32s; 
+  transition: all ease-out 0.32s;
 }
-  
+
 
 .ng-hide-remove li {
   opacity: 0; }
@@ -163,5 +191,5 @@ input.ng-valid-required.ng-valid:not(.ng-invalid), textarea.ng-valid-required.ng
 
 .drop-box-image {
 	max-width: 150px;
-	max-height: 150px;   
+	max-height: 150px;
 }

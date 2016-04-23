@@ -14,15 +14,17 @@
       <ul class="nav navbar-nav">
         <li ng-repeat="entry in nav" ng-class="{active: navigationController.isActiveNav(entry)}"
             ng-show="navigationController.isPermitted(entry)">
-            <a href="#{{entry.path}}">{{entry.name}}</a>
+            <a  href="#{{entry.path}}" data-toggle="collapse" data-target=".navbar-collapse">{{entry.name}}</a>
         </li>
       </ul>
       <div style="float:right; color:white" >
         <ul class="nav navbar-nav">
-            <li><a href="#/login" ng-hide="navigationController.isLoggedIn()">Login</a></li>
+            <li><a href="#/login" ng-hide="navigationController.isLoggedIn()"
+                   data-toggle="collapse" data-target=".navbar-collapse">Login</a></li>
             <li>
                 <a href="#/login" ng-click="navigationController.logout()"
-                                  ng-show="navigationController.isLoggedIn()">Logout</a>
+                                  ng-show="navigationController.isLoggedIn()"
+                                  data-toggle="collapse" data-target=".navbar-collapse">Logout</a>
             </li>
         </ul>
       </div>

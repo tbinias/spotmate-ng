@@ -1,9 +1,9 @@
-<div style="width: 380px; height:120px; overflow: hidden">
+<div class="spotmate-ranking">
 	<div ng-hide="vm.rankings" style="text-align:center">
 		Loading ...
 	</div>
 	<div ng-show="vm.rankings">
-		<div style="float:left; margin-left: 5px" ng-repeat="(key, value) in vm.rankings | orderBy:'time' | groupBy: 'day'">
+		<div class="rank" ng-repeat="(key, value) in vm.rankings | orderBy:'time' | groupBy: 'day'">
 			<div>{{key}}</div>
 			<table>
 				<tr>
