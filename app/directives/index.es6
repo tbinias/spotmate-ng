@@ -4,3 +4,4 @@ import './daily-forecast';
 import './frmSpot.js';
 import './spot-ranking';
 import './star-rating';
+import './navigation';

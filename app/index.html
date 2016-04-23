@@ -19,31 +19,8 @@
 </head>
 
 <body ng-app="SpotMate">
-    <nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="NavController">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#/">SpotMate</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-          	<li ng-repeat="entry in nav" ng-class="{active: activeNav(entry)}" ng-show="isPermitted(entry)"><a href="#{{entry.path}}">{{entry.name}}</a></li>
-          </ul>
-          <div style="float:right; color:white" >
-          	<ul class="nav navbar-nav">
-        	 	<li><a href="#/login" ng-hide="isLoggedIn()">Login</a></li>
-        	 	<li><a href="#/login" ng-click="logout()" ng-show="isLoggedIn()">Logout</a></li>
-        	</ul>
-          </div>
-          <div class="clearfix"></div>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+
+    <spotmate-navigation></spotmate-navigation>
 
 	<div class="container, spotmate">
 <!-- 	    <div cg-busy="{promise:globalVM.promise,templateUrl:'partials/busy-indicator.html'}" ng-view></div> -->

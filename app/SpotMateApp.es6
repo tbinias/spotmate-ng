@@ -109,17 +109,6 @@ export default angular.module('SpotMate', [ 'ngResource', 'ngRoute', 'chart.js',
         }
     ])
     .run(function($rootScope, $location, UserService) {
-
         $rootScope.globalVM = {}
-
         UserService.startup();
-
-        $rootScope.logout = function() {
-            UserService.logout();
-        };
-
-        $rootScope.isLoggedIn = function() {
-            return UserService.isLoggedIn();
-        }
-
     });
