@@ -33,7 +33,9 @@
     "html-loader": "^0.4.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "docker": "npm run build;docker build -t spotmate .;docker run -it -p 8080:80 --rm --name spotmate spotmate"
   },
   "author": "tbinias",
   "license": "ISC"

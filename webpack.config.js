@@ -4,8 +4,11 @@ var webpack = require("webpack");
 
 module.exports = {
         entry: {
-            //app: "./app/app.js",
-            "SpotMate": "./app/index.es6"
+            "spotmate": "./app/index.es6"
+        },
+	output: {
+            path: __dirname + "/build/dist/",
+            filename: "[name].js"
         },
         devServer: {
             contentBase: "./app",
