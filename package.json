@@ -29,13 +29,14 @@
     "html-loader": "^0.4.3",
     "json-server": "^0.8.14",
     "node-sass": "^3.4.2",
+    "protractor": "^2.5.1",
     "sass-loader": "^3.2.0",
     "style-loader": "0.13.0",
     "webpack": "^1.13.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
+    "e2etest": "npm run build; docker-compose build; docker-compose up -d;./waitForDockerCompose.sh;node_modules/protractor/bin/protractor test/protractor.conf;docker-compose down",
     "docker-build": "npm run build;docker build -t spotmate .",
     "docker-start": "npm run docker-build;docker run -it -p 8080:80 --env BACKEND_URL=https://spotmate.binias-online.de/spotmate --rm --name spotmate spotmate",
     "backend": "node_modules/json-server/bin/index.js mock-backend/db.js"
