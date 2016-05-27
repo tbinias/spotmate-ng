@@ -5,18 +5,23 @@
 	<div class="clearfix"></div>
 	<div class="forecast-day" ng-repeat="(key, value) in vm.weatherForecast.forecasts | groupBy: 'day'">
 		<b>{{key}}</b>
-		<table style="width:100%; table-layout: fixed;">
+		<table style="width:100%;">
 			<tr>
 				<td class="forecast-label">Time</td>
-				<td class="forecast-value forecast-headline" align="center"
+				<td align="center"
                     ng-repeat="forecast in value | orderBy:'time'" >
-					{{forecast.time | date : 'HH'}}h
+                    <div class="forecast-headline forecast-value"
+                         ng-class="{night: dailyForecastController.isNightTime(forecast.time)}">
+				      {{forecast.time | date : 'HH'}}
+                    </div>
 				</td>
 			</tr>
 			<tr>
-				<td class="forecast-label">WindAvg</td>
-				<td class="forecast-value" align="center" ng-repeat="forecast in value | orderBy:'time'">
-					<div style="height: 70px; position:relative">
+				<td class="forecast-label">Avg</td>
+				<td align="center" ng-repeat="forecast in value | orderBy:'time'">
+					<div style="height: 70px; position:relative"
+                         class="forecast-value"
+                         ng-class="{night: dailyForecastController.isNightTime(forecast.time)}">
 						{{forecast.windAvg}}
 						<div style="z-index: -10; position:absolute; bottom: 0; width: 100%;
                                 background-color: hsl({{250-(forecast.windAvg * 6)}},100%,45%);
@@ -27,44 +32,55 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="forecast-label">WindGust</td>
-				<td class="forecast-value" align="center" ng-repeat="forecast in value | orderBy:'time'">
-					<div style="background-color: hsl({{250-(forecast.windGust * 6)}},100%,45%)">
+				<td class="forecast-label">Gust</td>
+				<td  align="center" ng-repeat="forecast in value | orderBy:'time'">
+					<div class="forecast-value" style="background-color: hsl({{250-(forecast.windGust * 6)}},100%,45%)"
+                        ng-class="{night: dailyForecastController.isNightTime(forecast.time)}">
 						{{forecast.windGust}}
 					</div>
 
 				</td>
 			</tr>
 			<tr>
-				<td class="forecast-label">WindDir</td>
-				<td style="border: 1px solid grey; height: 60px;" align="center"
+				<td class="forecast-label">Dir</td>
+				<td style="height: 60px;" align="center"
                     ng-repeat="forecast in value | orderBy:'time'">
-					<div style="width:100%; transform: rotate({{forecast.windDirection}}deg);
-                                -webkit-transform: rotate({{forecast.windDirection}}deg);
-                                -ms-transform: rotate({{forecast.windDirection}}deg);">
-						<img src="/icons/arrow_down.png">
-					</div>
-					{{forecast.windDirection}}
+                    <div class="forecast-value"
+                         ng-class="{night: dailyForecastController.isNightTime(forecast.time)}">
+    					<div style="width:100%; transform: rotate({{forecast.windDirection}}deg);
+                                    -webkit-transform: rotate({{forecast.windDirection}}deg);
+                                    -ms-transform: rotate({{forecast.windDirection}}deg);">
+    						<img class="winddir-image" src="/icons/arrow_down.png">
+    					</div>
+                        <div class="winddir-value">
+    					  {{forecast.windDirection}}
+                        </div>
+                    </div>
 				</td>
 			</tr>
 			<tr>
-				<td class="forecast-label">Temp.</td>
-				<td class="forecast-value" align="center" ng-repeat="forecast in value | orderBy:'time'">
-					{{forecast.temperature}}
+				<td class="forecast-label">°C</td>
+				<td  align="center" ng-repeat="forecast in value | orderBy:'time'">
+                    <div class="forecast-value" ng-class="{night: dailyForecastController.isNightTime(forecast.time)}">
+					  {{forecast.temperature}}
+                    </div>
 				</td>
 			</tr>
 			<tr ng-show="vm.weatherForecast.hasCloudCoverageInfo">
 				<td class="forecast-label">Sky</td>
-				<td class="forecast-value" align="center" ng-repeat="forecast in value | orderBy:'time'">
-					<img ng-show="dailyForecastController.getWeatherIconURL(forecast)" width="24"
-                        ng-src="{{dailyForecastController.getWeatherIconURL(forecast)}}">
+				<td  align="center" ng-repeat="forecast in value | orderBy:'time'">
+                    <div class="forecast-value" ng-class="{night: dailyForecastController.isNightTime(forecast.time)}">
+					  <img class="sky" ng-show="dailyForecastController.getWeatherIconURL(forecast)"
+                          ng-src="{{dailyForecastController.getWeatherIconURL(forecast)}}">
+                    </div>
 				</td>
 			</tr>
 			<tr>
 				<td class="forecast-label">Rain</td>
-				<td class="forecast-value" align="center" ng-repeat="forecast in value | orderBy:'time'">
-					<div style="background-color:
-                                {{dailyForecastController.getPrecipitationBackgroundColor(forecast)}}">
+				<td  align="center" ng-repeat="forecast in value | orderBy:'time'">
+					<div class="forecast-value" style="background-color:
+                                {{dailyForecastController.getPrecipitationBackgroundColor(forecast)}}"
+                                ng-class="{night: dailyForecastController.isNightTime(forecast.time)}">
 						{{forecast.precipitation | number : 1}}
 					</div>
 				</td>

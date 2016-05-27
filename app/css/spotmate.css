@@ -24,18 +24,6 @@ body {
     margin-left: 5px;
 }
 
-@media (max-width: 35em) {
-    .spotmate-ranking {
-        width: auto;
-        height: auto;
-        overflow: auto;
-    }
-
-    .spotmate-ranking .rank {
-        float: none;
-    }
-
-}
 
 .spotmate .page-header {
   padding-top: 50px;
@@ -56,14 +44,70 @@ body {
 	padding-right: 4px;
 }
 
-.forecast-day td.forecast-value {
-	width: 35px;
+.forecast-day div.forecast-value {
+	//width: 35px;
 	padding: 1px;
 	border: 1px solid grey;
 }
 
-.forecast-day td.forecast-headline {
+.forecast-day div.forecast-headline {
 	padding: 5px;
+}
+
+
+@media (max-width: 35em) {
+    .spotmate-ranking {
+        width: auto;
+        height: auto;
+        overflow: auto;
+    }
+
+    .spotmate-ranking .rank {
+        float: none;
+    }
+}
+
+.sky {
+    width: 24px;
+}
+
+@media (max-width: 1024px) {
+    .night {
+        display: none;
+    }
+    .forecast-day div.forecast-headline {
+    	padding: 0px;
+    }
+
+    .chart-container {
+        display: none;
+    }
+
+    .forecast-day {
+        font-size: 10px;
+    }
+
+
+    .forecast-day div.forecast-value {
+    	border: 1px solid white;
+    }
+
+    .winddir-value {
+        display: none;
+    }
+
+    .winddir-image {
+        width: 16px;
+    }
+
+    .sky {
+        width: 16px;
+    }
+
+    .forecast-day td.forecast-label {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 }
 
 .forecast-day td.forecast-winddir {

@@ -96,6 +96,11 @@ class DailyForecastController {
         }
         return "#fff";
     }
+
+    isNightTime(time) {
+        var hour = this.$filter('date')(time, "HH");
+        return hour < 7 || hour > 21;
+    }
 }
 
 DailyForecastController.$inject = ['$rootScope', '$scope', '$filter', '$timeout', 'ForecastService', 'SpotService'];
