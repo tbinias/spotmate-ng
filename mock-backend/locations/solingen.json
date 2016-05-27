@@ -1,0 +1,53 @@
+{
+    "class": "locations",
+    "_links": {},
+    "_embedded": {
+        "locations": [{
+            "class": "location",
+            "_links": {
+                "weatherForecast": {
+                    "href": "/resources/forecasts/weather/BUIENRADAR/2831580%7Csolingen",
+                    "templated": false
+                }
+            },
+            "_embedded": {},
+            "id": "BUIENRADAR/2831580|solingen",
+            "locationId": "2831580|solingen",
+            "name": "Solingen",
+            "providerId": "BUIENRADAR",
+            "providerName": "Buienradar.NL"
+        }, {
+            "class": "location",
+            "_links": {
+                "tideForecast": {
+                    "href": "/resources/forecasts/tide/WINDFINDER/de1738",
+                    "templated": false
+                },
+                "weatherForecast": {
+                    "href": "/resources/forecasts/weather/WINDFINDER/de1738",
+                    "templated": false
+                }
+            },
+            "_embedded": {},
+            "id": "WINDFINDER/de1738",
+            "locationId": "de1738",
+            "name": "Solingen",
+            "providerId": "WINDFINDER",
+            "providerName": "Windfinder"
+        }, {
+            "class": "location",
+            "_links": {
+                "weatherForecast": {
+                    "href": "/resources/forecasts/weather/OWMAP/2831580",
+                    "templated": false
+                }
+            },
+            "_embedded": {},
+            "id": "OWMAP/2831580",
+            "locationId": "2831580",
+            "name": "Solingen",
+            "providerId": "OWMAP",
+            "providerName": "OpenWeatherMap"
+        }]
+    }
+}

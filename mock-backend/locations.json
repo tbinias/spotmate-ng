@@ -1,0 +1,14 @@
+{
+    "class": "locations",
+    "_links": {
+        "search": {
+            "href": "/resources/locations/search/{query}",
+            "templated": true
+        },
+        "self": {
+            "href": "/resources/locations",
+            "templated": false
+        }
+    },
+    "_embedded": {}
+}

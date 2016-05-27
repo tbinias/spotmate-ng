@@ -1,0 +1,88 @@
+{
+    "class": "spots",
+    "_links": {},
+    "_embedded": {
+        "spots": [{
+            "class": "spot",
+            "_links": {
+                "map": {
+                    "href": "/resources/spots/8/images/map",
+                    "templated": false
+                },
+                "self": {
+                    "href": "/resources/spots/8",
+                    "templated": false
+                }
+            },
+            "_embedded": {},
+            "id": 8,
+            "name": "Texel Nord",
+            "score": null,
+            "windDirections": [{
+                "id": 28,
+                "start": 324,
+                "end": 145,
+                "scoringFactor": 1
+            }]
+        }, {
+            "class": "spot",
+            "_links": {
+                "map": {
+                    "href": "/resources/spots/6/images/map",
+                    "templated": false
+                },
+                "self": {
+                    "href": "/resources/spots/6",
+                    "templated": false
+                }
+            },
+            "_embedded": {},
+            "id": 6,
+            "name": "Texel Paal 17",
+            "score": null,
+            "windDirections": [{
+                "id": 35,
+                "start": 200,
+                "end": 252,
+                "scoringFactor": 1
+            }, {
+                "id": 34,
+                "start": 204,
+                "end": 40,
+                "scoringFactor": 0.5
+            }, {
+                "id": 36,
+                "start": 340,
+                "end": 35,
+                "scoringFactor": 1
+            }]
+        }, {
+            "class": "spot",
+            "_links": {
+                "map": {
+                    "href": "/resources/spots/5/images/map",
+                    "templated": false
+                },
+                "self": {
+                    "href": "/resources/spots/5",
+                    "templated": false
+                }
+            },
+            "_embedded": {},
+            "id": 5,
+            "name": "Wijk aan zee",
+            "score": null,
+            "windDirections": [{
+                "id": 30,
+                "start": 195,
+                "end": 255,
+                "scoringFactor": 1
+            }, {
+                "id": 29,
+                "start": 193,
+                "end": 25,
+                "scoringFactor": 0.5
+            }]
+        }]
+    }
+}

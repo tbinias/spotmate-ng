@@ -1,0 +1,76 @@
+{
+    "ranks": {
+        "2016-05-28T09:00:00.000+0000": {
+            "avgWindSpeed": 14,
+            "avgWindDir": 47,
+            "score": 0,
+            "time": 1464426000000
+        },
+        "2016-05-28T12:00:00.000+0000": {
+            "avgWindSpeed": 16,
+            "avgWindDir": 45,
+            "score": 0,
+            "time": 1464436800000
+        },
+        "2016-05-29T09:00:00.000+0000": {
+            "avgWindSpeed": 11,
+            "avgWindDir": 37,
+            "score": 0,
+            "time": 1464512400000
+        },
+        "2016-05-28T06:00:00.000+0000": {
+            "avgWindSpeed": 12,
+            "avgWindDir": 47,
+            "score": 0,
+            "time": 1464415200000
+        },
+        "2016-05-27T15:00:00.000+0000": {
+            "avgWindSpeed": 13,
+            "avgWindDir": 44,
+            "score": 0,
+            "time": 1464361200000
+        },
+        "2016-05-27T12:00:00.000+0000": {
+            "avgWindSpeed": 12,
+            "avgWindDir": 43,
+            "score": 0,
+            "time": 1464350400000
+        },
+        "2016-05-27T09:00:00.000+0000": {
+            "avgWindSpeed": 11,
+            "avgWindDir": 45,
+            "score": 0,
+            "time": 1464339600000
+        },
+        "2016-05-28T15:00:00.000+0000": {
+            "avgWindSpeed": 15,
+            "avgWindDir": 44,
+            "score": 0,
+            "time": 1464447600000
+        },
+        "2016-05-29T15:00:00.000+0000": {
+            "avgWindSpeed": 14,
+            "avgWindDir": 40,
+            "score": 25,
+            "time": 1464534000000
+        },
+        "2016-05-29T06:00:00.000+0000": {
+            "avgWindSpeed": 11,
+            "avgWindDir": 38,
+            "score": 0,
+            "time": 1464501600000
+        },
+        "2016-05-29T12:00:00.000+0000": {
+            "avgWindSpeed": 11,
+            "avgWindDir": 39,
+            "score": 0,
+            "time": 1464523200000
+        },
+        "2016-05-27T06:00:00.000+0000": {
+            "avgWindSpeed": 10,
+            "avgWindDir": 50,
+            "score": 0,
+            "time": 1464328800000
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "class": "accounts",
+    "_links": {
+        "self": {
+            "href": "/resources/accounts",
+            "templated": false
+        }
+    },
+    "_embedded": {
+        "accounts": [{
+            "class": "account",
+            "_links": {
+                "self": {
+                    "href": "/resources/accounts/2",
+                    "templated": false
+                }
+            },
+            "_embedded": {},
+            "active": true,
+            "email": "thorsten@binias-online.de",
+            "id": 2,
+            "username": "thorsten@binias-online.de"
+        }]
+    }
+}
