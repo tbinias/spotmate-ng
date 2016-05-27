@@ -3,7 +3,7 @@ services:
   spotmate:
     build: .
     ports:
-      - "8080:80"
+      - "9090:80"
     environment:
       - BACKEND_URL=http://backend:80
     links:
