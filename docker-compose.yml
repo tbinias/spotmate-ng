@@ -5,7 +5,7 @@ services:
     ports:
       - "9090:80"
     environment:
-      - BACKEND_URL=http://backend:80
+      - BACKEND_URL=http://backend:3000
     links:
       - backend
   backend:
