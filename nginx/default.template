@@ -3,6 +3,7 @@ perl_set $backend_url 'sub { return $ENV{"BACKEND_URL"}; }';
 server {
     listen       80;
     server_name  localhost;
+    resolver 127.0.0.1;
 
     #charset koi8-r;
     #access_log  /var/log/nginx/log/host.access.log  main;
@@ -11,13 +12,13 @@ server {
         root   /usr/share/nginx/html;
         index  index.html index.htm;
     }
-    
+
     location /resources {
-	rewrite ^(.*)$ /spotmate$1 break;
+	    #rewrite ^(.*)$ /spotmate$1 break;
         proxy_set_header Host $host:8080;
         #proxy_set_header X-Real-IP $remote_addr;
-        proxy_pass $backend_url;
-	proxy_redirect off;
+        proxy_pass http://backend:80;
+	    proxy_redirect off;
     }
 
     #error_page  404              /404.html;
@@ -36,4 +37,3 @@ server {
     #    deny  all;
     #}
 }
-

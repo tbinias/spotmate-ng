@@ -1,8 +1,7 @@
-FROM helder/nginx-extras
-COPY ./build/dist/spotmate.js /usr/share/nginx/html/
-COPY ./app/index.html /usr/share/nginx/html/
-COPY ./app/index.html /usr/share/nginx/html/
-COPY ./app/partials/ /usr/share/nginx/html/partials/
-COPY ./app/icons/ /usr/share/nginx/html/icons/
-COPY nginx/nginx.conf /etc/nginx/nginx.conf
-COPY nginx/default.template /etc/nginx/conf.d/default.conf
+FROM joshix/caddy
+COPY ./build/dist/spotmate.js /var/www/html/
+COPY ./app/index.html /var/www/html/
+COPY ./app/index.html /var/www/html/
+COPY ./app/partials/ /var/www/html/partials/
+COPY ./app/icons/ /var/www/html/icons/
+COPY caddy/Caddyfile /var/www/html/

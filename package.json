@@ -36,8 +36,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "docker": "npm run build;docker build -t spotmate .;docker run -it -p 8080:80 --rm --name spotmate spotmate",
-    "backend": "node mock-backend.js"
+    "docker-build": "npm run build;docker build -t spotmate .",
+    "docker-start": "npm run docker-build;docker run -it -p 8080:80 --env BACKEND_URL=https://spotmate.binias-online.de/spotmate --rm --name spotmate spotmate",
+    "backend": "node_modules/json-server/bin/index.js mock-backend/db.js"
   },
   "author": "tbinias",
   "license": "ISC"

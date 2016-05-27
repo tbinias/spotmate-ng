@@ -1,0 +1,7 @@
+0.0.0.0:80 {
+  log stdout
+  errors stderr
+  proxy /resources {$BACKEND_URL} {
+    proxy_header Host {host}
+  }
+}
