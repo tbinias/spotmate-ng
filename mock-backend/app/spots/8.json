@@ -1,0 +1,89 @@
+{
+    "class": "spot",
+    "_links": {
+        "map": {
+            "href": "https://spotmate.binias-online.de/spotmate/resources/spots/8/images/map",
+            "templated": false
+        },
+        "self": {
+            "href": "https://spotmate.binias-online.de/spotmate/resources/spots/8",
+            "templated": false
+        }
+    },
+    "_embedded": {
+        "locations": [{
+            "class": "location",
+            "_links": {
+                "tideForecast": {
+                    "href": "https://spotmate.binias-online.de/spotmate/resources/forecasts/tide/WINDFINDER/nl161",
+                    "templated": false
+                },
+                "weatherForecast": {
+                    "href": "https://spotmate.binias-online.de/spotmate/resources/forecasts/weather/WINDFINDER/nl161",
+                    "templated": false
+                }
+            },
+            "_embedded": {},
+            "id": "WINDFINDER/nl161",
+            "locationId": "nl161",
+            "name": "Texel Airport",
+            "providerId": "WINDFINDER",
+            "providerName": "Windfinder"
+        }, {
+            "class": "location",
+            "_links": {
+                "tideForecast": {
+                    "href": "https://spotmate.binias-online.de/spotmate/resources/forecasts/tide/WINDFINDER/nl4",
+                    "templated": false
+                },
+                "weatherForecast": {
+                    "href": "https://spotmate.binias-online.de/spotmate/resources/forecasts/weather/WINDFINDER/nl4",
+                    "templated": false
+                }
+            },
+            "_embedded": {},
+            "id": "WINDFINDER/nl4",
+            "locationId": "nl4",
+            "name": "Vlieland Vliehors",
+            "providerId": "WINDFINDER",
+            "providerName": "Windfinder"
+        }, {
+            "class": "location",
+            "_links": {
+                "weatherForecast": {
+                    "href": "https://spotmate.binias-online.de/spotmate/resources/forecasts/weather/MUCHOVIENTO/texl",
+                    "templated": false
+                }
+            },
+            "_embedded": {},
+            "id": "MUCHOVIENTO/texl",
+            "locationId": "texl",
+            "name": "Texel",
+            "providerId": "MUCHOVIENTO",
+            "providerName": "Muchoviento.net"
+        }, {
+            "class": "location",
+            "_links": {
+                "weatherForecast": {
+                    "href": "https://spotmate.binias-online.de/spotmate/resources/forecasts/weather/BUIENRADAR/8555930%7Ctexel%20international%20airport",
+                    "templated": false
+                }
+            },
+            "_embedded": {},
+            "id": "BUIENRADAR/8555930|texel international airport",
+            "locationId": "8555930|texel international airport",
+            "name": null,
+            "providerId": "BUIENRADAR",
+            "providerName": "Buienradar.NL"
+        }]
+    },
+    "id": 8,
+    "name": "Texel Nord",
+    "score": null,
+    "windDirections": [{
+        "id": 28,
+        "start": 324,
+        "end": 145,
+        "scoringFactor": 1
+    }]
+}

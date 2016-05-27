@@ -1,0 +1,81 @@
+{
+    "class": "spot",
+    "_links": {
+        "map": {
+            "href": "https://spotmate.binias-online.de/spotmate/resources/spots/6/images/map",
+            "templated": false
+        },
+        "self": {
+            "href": "https://spotmate.binias-online.de/spotmate/resources/spots/6",
+            "templated": false
+        }
+    },
+    "_embedded": {
+        "locations": [{
+            "class": "location",
+            "_links": {
+                "tideForecast": {
+                    "href": "https://spotmate.binias-online.de/spotmate/resources/forecasts/tide/WINDFINDER/nl204",
+                    "templated": false
+                },
+                "weatherForecast": {
+                    "href": "https://spotmate.binias-online.de/spotmate/resources/forecasts/weather/WINDFINDER/nl204",
+                    "templated": false
+                }
+            },
+            "_embedded": {},
+            "id": "WINDFINDER/nl204",
+            "locationId": "nl204",
+            "name": "Texel / Paal 17",
+            "providerId": "WINDFINDER",
+            "providerName": "Windfinder"
+        }, {
+            "class": "location",
+            "_links": {
+                "weatherForecast": {
+                    "href": "https://spotmate.binias-online.de/spotmate/resources/forecasts/weather/MUCHOVIENTO/texl",
+                    "templated": false
+                }
+            },
+            "_embedded": {},
+            "id": "MUCHOVIENTO/texl",
+            "locationId": "texl",
+            "name": "Texel",
+            "providerId": "MUCHOVIENTO",
+            "providerName": "Muchoviento.net"
+        }, {
+            "class": "location",
+            "_links": {
+                "weatherForecast": {
+                    "href": "https://spotmate.binias-online.de/spotmate/resources/forecasts/weather/BUIENRADAR/8555930%7Ctexel%20international%20airport",
+                    "templated": false
+                }
+            },
+            "_embedded": {},
+            "id": "BUIENRADAR/8555930|texel international airport",
+            "locationId": "8555930|texel international airport",
+            "name": null,
+            "providerId": "BUIENRADAR",
+            "providerName": "Buienradar.NL"
+        }]
+    },
+    "id": 6,
+    "name": "Texel Paal 17",
+    "score": null,
+    "windDirections": [{
+        "id": 36,
+        "start": 340,
+        "end": 35,
+        "scoringFactor": 1
+    }, {
+        "id": 34,
+        "start": 204,
+        "end": 40,
+        "scoringFactor": 0.5
+    }, {
+        "id": 35,
+        "start": 200,
+        "end": 252,
+        "scoringFactor": 1
+    }]
+}

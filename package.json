@@ -26,6 +26,7 @@
     "babel-loader": "^5.3.1",
     "babel-plugin-object-assign": "^1.2.1",
     "css-loader": "0.23.0",
+    "express": "^4.13.4",
     "html-loader": "^0.4.3",
     "json-server": "^0.8.14",
     "node-sass": "^3.4.2",

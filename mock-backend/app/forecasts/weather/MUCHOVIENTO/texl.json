@@ -1,0 +1,678 @@
+{
+  "class": "forecast",
+  "_links": {
+    "self": {
+      "href": "/resources/forecasts/weather/MUCHOVIENTO/texl",
+      "templated": false
+    }
+  },
+  "_embedded": {
+    "location": {
+      "class": "location",
+      "_links": {
+        "weatherForecast": {
+          "href": "/resources/forecasts/weather/MUCHOVIENTO/texl",
+          "templated": false
+        }
+      },
+      "_embedded": {},
+      "id": "MUCHOVIENTO/texl",
+      "locationId": "texl",
+      "name": "Texel",
+      "providerId": "MUCHOVIENTO",
+      "providerName": "Muchoviento.net"
+    }
+  },
+  "expires": 1464383050000,
+  "forecasts": [
+    {
+      "time": 1464314400000,
+      "windAvg": null,
+      "windGust": null,
+      "windDirection": null,
+      "temperature": null,
+      "precipitation": null,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464397200000,
+      "windAvg": 11,
+      "windGust": 13,
+      "windDirection": 69,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464364800000,
+      "windAvg": 12,
+      "windGust": 14,
+      "windDirection": 37,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464418800000,
+      "windAvg": 9,
+      "windGust": 11,
+      "windDirection": 62,
+      "temperature": 13,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464361200000,
+      "windAvg": 13,
+      "windGust": 14,
+      "windDirection": 36,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464336000000,
+      "windAvg": null,
+      "windGust": null,
+      "windDirection": null,
+      "temperature": null,
+      "precipitation": null,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464447600000,
+      "windAvg": 17,
+      "windGust": 20,
+      "windDirection": 49,
+      "temperature": 13,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464552000000,
+      "windAvg": 19,
+      "windGust": 22,
+      "windDirection": 23,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464404400000,
+      "windAvg": 10,
+      "windGust": 11,
+      "windDirection": 69,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464354000000,
+      "windAvg": 12,
+      "windGust": 13,
+      "windDirection": 36,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464436800000,
+      "windAvg": 15,
+      "windGust": 18,
+      "windDirection": 49,
+      "temperature": 13,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464393600000,
+      "windAvg": 11,
+      "windGust": 13,
+      "windDirection": 68,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464346800000,
+      "windAvg": 10,
+      "windGust": 11,
+      "windDirection": 43,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464548400000,
+      "windAvg": 19,
+      "windGust": 24,
+      "windDirection": 29,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464332400000,
+      "windAvg": null,
+      "windGust": null,
+      "windDirection": null,
+      "temperature": null,
+      "precipitation": null,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464382800000,
+      "windAvg": 13,
+      "windGust": 15,
+      "windDirection": 51,
+      "temperature": 11,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464494400000,
+      "windAvg": 18,
+      "windGust": 22,
+      "windDirection": 56,
+      "temperature": 13,
+      "precipitation": 0.26332134,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464490800000,
+      "windAvg": 16,
+      "windGust": 20,
+      "windDirection": 62,
+      "temperature": 14,
+      "precipitation": 1.0358253,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464357600000,
+      "windAvg": 12,
+      "windGust": 14,
+      "windDirection": 36,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464544800000,
+      "windAvg": 19,
+      "windGust": 24,
+      "windDirection": 32,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464555600000,
+      "windAvg": 18,
+      "windGust": 20,
+      "windDirection": 18,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464440400000,
+      "windAvg": 17,
+      "windGust": 19,
+      "windDirection": 49,
+      "temperature": 13,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464537600000,
+      "windAvg": 20,
+      "windGust": 25,
+      "windDirection": 34,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464318000000,
+      "windAvg": null,
+      "windGust": null,
+      "windDirection": null,
+      "temperature": null,
+      "precipitation": null,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464512400000,
+      "windAvg": 17,
+      "windGust": 21,
+      "windDirection": 44,
+      "temperature": 12,
+      "precipitation": 1.8575534,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464343200000,
+      "windAvg": 9,
+      "windGust": 10,
+      "windDirection": 48,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464526800000,
+      "windAvg": 18,
+      "windGust": 23,
+      "windDirection": 35,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464516000000,
+      "windAvg": 18,
+      "windGust": 22,
+      "windDirection": 47,
+      "temperature": 12,
+      "precipitation": 0.25263846,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464368400000,
+      "windAvg": 12,
+      "windGust": 13,
+      "windDirection": 37,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464498000000,
+      "windAvg": 18,
+      "windGust": 22,
+      "windDirection": 49,
+      "temperature": 13,
+      "precipitation": 1.1259198,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464472800000,
+      "windAvg": 17,
+      "windGust": 20,
+      "windDirection": 49,
+      "temperature": 13,
+      "precipitation": 1.513294,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464303600000,
+      "windAvg": null,
+      "windGust": null,
+      "windDirection": null,
+      "temperature": null,
+      "precipitation": null,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464465600000,
+      "windAvg": 19,
+      "windGust": 23,
+      "windDirection": 50,
+      "temperature": 13,
+      "precipitation": 0.3933809,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464519600000,
+      "windAvg": 18,
+      "windGust": 22,
+      "windDirection": 46,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464426000000,
+      "windAvg": 9,
+      "windGust": 11,
+      "windDirection": 64,
+      "temperature": 13,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464433200000,
+      "windAvg": 13,
+      "windGust": 15,
+      "windDirection": 54,
+      "temperature": 13,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464505200000,
+      "windAvg": 19,
+      "windGust": 22,
+      "windDirection": 50,
+      "temperature": 12,
+      "precipitation": 0.27446017,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464310800000,
+      "windAvg": null,
+      "windGust": null,
+      "windDirection": null,
+      "temperature": null,
+      "precipitation": null,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464462000000,
+      "windAvg": 19,
+      "windGust": 23,
+      "windDirection": 49,
+      "temperature": 13,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464386400000,
+      "windAvg": 13,
+      "windGust": 14,
+      "windDirection": 54,
+      "temperature": 11,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464328800000,
+      "windAvg": null,
+      "windGust": null,
+      "windDirection": null,
+      "temperature": null,
+      "precipitation": null,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464325200000,
+      "windAvg": null,
+      "windGust": null,
+      "windDirection": null,
+      "temperature": null,
+      "precipitation": null,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464390000000,
+      "windAvg": 12,
+      "windGust": 13,
+      "windDirection": 60,
+      "temperature": 11,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464458400000,
+      "windAvg": 18,
+      "windGust": 22,
+      "windDirection": 47,
+      "temperature": 13,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464350400000,
+      "windAvg": 11,
+      "windGust": 12,
+      "windDirection": 40,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464429600000,
+      "windAvg": 10,
+      "windGust": 12,
+      "windDirection": 58,
+      "temperature": 13,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464483600000,
+      "windAvg": 13,
+      "windGust": 17,
+      "windDirection": 72,
+      "temperature": 14,
+      "precipitation": 1.8812776,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464469200000,
+      "windAvg": 18,
+      "windGust": 22,
+      "windDirection": 51,
+      "temperature": 13,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464400800000,
+      "windAvg": 11,
+      "windGust": 13,
+      "windDirection": 69,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464372000000,
+      "windAvg": 11,
+      "windGust": 13,
+      "windDirection": 38,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464408000000,
+      "windAvg": 10,
+      "windGust": 11,
+      "windDirection": 71,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464454800000,
+      "windAvg": 18,
+      "windGust": 22,
+      "windDirection": 47,
+      "temperature": 13,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464411600000,
+      "windAvg": 10,
+      "windGust": 11,
+      "windDirection": 68,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464415200000,
+      "windAvg": 9,
+      "windGust": 11,
+      "windDirection": 65,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464451200000,
+      "windAvg": 17,
+      "windGust": 20,
+      "windDirection": 48,
+      "temperature": 13,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464480000000,
+      "windAvg": 12,
+      "windGust": 15,
+      "windDirection": 62,
+      "temperature": 14,
+      "precipitation": 2.193017,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464422400000,
+      "windAvg": 9,
+      "windGust": 11,
+      "windDirection": 64,
+      "temperature": 13,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464375600000,
+      "windAvg": 11,
+      "windGust": 13,
+      "windDirection": 39,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464541200000,
+      "windAvg": 19,
+      "windGust": 24,
+      "windDirection": 35,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464501600000,
+      "windAvg": 19,
+      "windGust": 23,
+      "windDirection": 49,
+      "temperature": 12,
+      "precipitation": 1.3783917,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464523200000,
+      "windAvg": 18,
+      "windGust": 22,
+      "windDirection": 43,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464300000000,
+      "windAvg": null,
+      "windGust": null,
+      "windDirection": null,
+      "temperature": null,
+      "precipitation": null,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464321600000,
+      "windAvg": null,
+      "windGust": null,
+      "windDirection": null,
+      "temperature": null,
+      "precipitation": null,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464307200000,
+      "windAvg": null,
+      "windGust": null,
+      "windDirection": null,
+      "temperature": null,
+      "precipitation": null,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464444000000,
+      "windAvg": 17,
+      "windGust": 20,
+      "windDirection": 49,
+      "temperature": 13,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464487200000,
+      "windAvg": 14,
+      "windGust": 18,
+      "windDirection": 67,
+      "temperature": 14,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464530400000,
+      "windAvg": 18,
+      "windGust": 24,
+      "windDirection": 32,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464379200000,
+      "windAvg": 13,
+      "windGust": 15,
+      "windDirection": 46,
+      "temperature": 11,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464339600000,
+      "windAvg": null,
+      "windGust": null,
+      "windDirection": null,
+      "temperature": null,
+      "precipitation": null,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464534000000,
+      "windAvg": 20,
+      "windGust": 26,
+      "windDirection": 33,
+      "temperature": 12,
+      "precipitation": 0,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464476400000,
+      "windAvg": 15,
+      "windGust": 18,
+      "windDirection": 55,
+      "temperature": 13,
+      "precipitation": 2.4984238,
+      "cloudCoverage": null
+    },
+    {
+      "time": 1464508800000,
+      "windAvg": 18,
+      "windGust": 22,
+      "windDirection": 47,
+      "temperature": 12,
+      "precipitation": 0.7674255,
+      "cloudCoverage": null
+    }
+  ],
+  "issueTime": 1464361450000
+}

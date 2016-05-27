@@ -1,0 +1,13 @@
+{
+  "name": "spotmate-ng-mock-backend",
+  "version": "0.0.1",
+  "description": "mock backend for spotmate-ng",
+  "author": "Thorsten Binias <thorsten@binias-online.de>",
+  "main": "app/server.js",
+  "scripts": {
+    "start": "node app/server.js"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}

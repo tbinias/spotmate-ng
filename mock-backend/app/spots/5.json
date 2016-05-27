@@ -1,0 +1,76 @@
+{
+    "class": "spot",
+    "_links": {
+        "map": {
+            "href": "https://spotmate.binias-online.de/spotmate/resources/spots/5/images/map",
+            "templated": false
+        },
+        "self": {
+            "href": "https://spotmate.binias-online.de/spotmate/resources/spots/5",
+            "templated": false
+        }
+    },
+    "_embedded": {
+        "locations": [{
+            "class": "location",
+            "_links": {
+                "weatherForecast": {
+                    "href": "https://spotmate.binias-online.de/spotmate/resources/forecasts/weather/BUIENRADAR/2744484%7Cwijk%20aan%20zee",
+                    "templated": false
+                }
+            },
+            "_embedded": {},
+            "id": "BUIENRADAR/2744484|wijk aan zee",
+            "locationId": "2744484|wijk aan zee",
+            "name": "Wijk aan Zee",
+            "providerId": "BUIENRADAR",
+            "providerName": "Buienradar.NL"
+        }, {
+            "class": "location",
+            "_links": {
+                "tideForecast": {
+                    "href": "https://spotmate.binias-online.de/spotmate/resources/forecasts/tide/WINDFINDER/nl527",
+                    "templated": false
+                },
+                "weatherForecast": {
+                    "href": "https://spotmate.binias-online.de/spotmate/resources/forecasts/weather/WINDFINDER/nl527",
+                    "templated": false
+                }
+            },
+            "_embedded": {},
+            "id": "WINDFINDER/nl527",
+            "locationId": "nl527",
+            "name": "Wijk aan Zee Strand",
+            "providerId": "WINDFINDER",
+            "providerName": "Windfinder"
+        }, {
+            "class": "location",
+            "_links": {
+                "weatherForecast": {
+                    "href": "https://spotmate.binias-online.de/spotmate/resources/forecasts/weather/MUCHOVIENTO/wijk",
+                    "templated": false
+                }
+            },
+            "_embedded": {},
+            "id": "MUCHOVIENTO/wijk",
+            "locationId": "wijk",
+            "name": "Wijk aan Zee",
+            "providerId": "MUCHOVIENTO",
+            "providerName": "Muchoviento.net"
+        }]
+    },
+    "id": 5,
+    "name": "Wijk aan zee",
+    "score": null,
+    "windDirections": [{
+        "id": 30,
+        "start": 195,
+        "end": 255,
+        "scoringFactor": 1
+    }, {
+        "id": 29,
+        "start": 193,
+        "end": 25,
+        "scoringFactor": 0.5
+    }]
+}
