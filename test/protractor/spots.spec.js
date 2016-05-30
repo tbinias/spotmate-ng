@@ -9,6 +9,7 @@ describe('spots', function() {
 
         it('should render spots', function() {
             expect(element.all(by.css('.list-group-item')).count()).toBe(3);
+	    browser.sleep(1000);
         });
 
     });
