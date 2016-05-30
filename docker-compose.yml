@@ -14,5 +14,7 @@ services:
     image: selenium/standalone-firefox
     ports:
       - "4444:4444"
+    environment:
+      - TZ=Europe/Berlin
     links:
       - spotmate
