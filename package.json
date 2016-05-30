@@ -32,6 +32,7 @@
     "json-server": "^0.8.14",
     "node-sass": "^3.4.2",
     "protractor": "^2.5.1",
+    "protractor-html-screenshot-reporter": "0.0.21",
     "sass-loader": "^3.2.0",
     "style-loader": "0.13.0",
     "webpack": "^1.13.1"
