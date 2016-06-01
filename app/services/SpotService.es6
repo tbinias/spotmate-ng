@@ -107,8 +107,8 @@ class SpotService {
             var rankings = [];
             for (var key in result.ranks) {
                 if (result.ranks.hasOwnProperty(key)) {
-                    var day = self.$filter('date')(key,"EEE dd.MM");
                     var rank = result.ranks[key];
+                    var day = self.$filter('date')(rank.time,"EEE dd.MM", "UTC");
                     rank.day = day;
                     rankings.push(rank);
                 }
