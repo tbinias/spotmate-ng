@@ -9,7 +9,10 @@ node {
    sh "npm install"
    sh "npm run build"
 
-   stage 'E2E Test'
+   stage 'Integration Test'
    sh "npm run integration-test"
    step([$class: 'JUnitResultArchiver', testResults: 'reports/protractor/xml/*.xml'])
+
+   stage 'Build docker & tag'
+   sh "docker build -t spotmate:${env.BUILD_NUMBER} ."
 }
