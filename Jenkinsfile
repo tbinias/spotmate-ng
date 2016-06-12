@@ -16,5 +16,5 @@ node {
    stage 'Build docker & tag'
    sh "docker build -t spotmate:${env.BUILD_NUMBER} ."
 
-   build job: 'deploy spotmate-ng', parameters: [[$class: 'StringParameterValue', name: 'dockertag', value: '${env.BUILD_NUMBER}']], wait: false
+   build job: 'deploy spotmate-ng', parameters: [[$class: 'StringParameterValue', name: 'dockertag', value: ${env.BUILD_NUMBER}]], wait: false
 }
