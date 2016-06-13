@@ -13,6 +13,6 @@ node {
    sh "npm run integration-test"
    step([$class: 'JUnitResultArchiver', testResults: 'reports/protractor/xml/*.xml'])
 
-   stage 'Build docker & tag'
-   sh "docker build -t spotmate:${env.BUILD_NUMBER} ."
+   stage 'Create artifacts'
+   archive 'Dockerfile, app/**/*, build/dist/**/*,caddy/**/*'
 }
