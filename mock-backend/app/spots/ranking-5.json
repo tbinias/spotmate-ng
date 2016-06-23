@@ -1,76 +1,76 @@
 {
     "ranks": {
-        "2016-05-28T09:00:00.000+0000": {
-            "avgWindSpeed": 8,
-            "avgWindDir": 63,
-            "score": 0,
-            "time": 1464426000000
-        },
-        "2016-05-28T12:00:00.000+0000": {
+        "2016-06-25T17:00:00.000+0000": {
             "avgWindSpeed": 9,
-            "avgWindDir": 43,
-            "score": 0,
-            "time": 1464436800000
+            "avgWindDir": 272,
+            "score": 0.0,
+            "time": 1466874000000
         },
-        "2016-05-29T09:00:00.000+0000": {
+        "2016-06-24T14:00:00.000+0000": {
             "avgWindSpeed": 8,
-            "avgWindDir": 339,
-            "score": 0,
-            "time": 1464512400000
+            "avgWindDir": 260,
+            "score": 0.0,
+            "time": 1466776800000
         },
-        "2016-05-28T06:00:00.000+0000": {
+        "2016-06-25T14:00:00.000+0000": {
+            "avgWindSpeed": 9,
+            "avgWindDir": 271,
+            "score": 0.0,
+            "time": 1466863200000
+        },
+        "2016-06-25T08:00:00.000+0000": {
+            "avgWindSpeed": 6,
+            "avgWindDir": 259,
+            "score": 0.0,
+            "time": 1466841600000
+        },
+        "2016-06-23T08:00:00.000+0000": {
+            "avgWindSpeed": 6,
+            "avgWindDir": 41,
+            "score": 0.0,
+            "time": 1466668800000
+        },
+        "2016-06-24T17:00:00.000+0000": {
+            "avgWindSpeed": 6,
+            "avgWindDir": 271,
+            "score": 0.0,
+            "time": 1466787600000
+        },
+        "2016-06-24T11:00:00.000+0000": {
+            "avgWindSpeed": 8,
+            "avgWindDir": 247,
+            "score": 0.0,
+            "time": 1466766000000
+        },
+        "2016-06-23T17:00:00.000+0000": {
             "avgWindSpeed": 7,
-            "avgWindDir": 59,
-            "score": 0,
-            "time": 1464415200000
+            "avgWindDir": 351,
+            "score": 0.0,
+            "time": 1466701200000
         },
-        "2016-05-27T15:00:00.000+0000": {
-            "avgWindSpeed": 11,
-            "avgWindDir": 30,
-            "score": 0,
-            "time": 1464361200000
+        "2016-06-25T11:00:00.000+0000": {
+            "avgWindSpeed": 7,
+            "avgWindDir": 265,
+            "score": 0.0,
+            "time": 1466852400000
         },
-        "2016-05-27T12:00:00.000+0000": {
-            "avgWindSpeed": 10,
-            "avgWindDir": 52,
-            "score": 0,
-            "time": 1464350400000
+        "2016-06-23T11:00:00.000+0000": {
+            "avgWindSpeed": 2,
+            "avgWindDir": 176,
+            "score": 0.0,
+            "time": 1466679600000
         },
-        "2016-05-27T09:00:00.000+0000": {
-            "avgWindSpeed": 9,
-            "avgWindDir": 67,
-            "score": 0,
-            "time": 1464339600000
+        "2016-06-23T14:00:00.000+0000": {
+            "avgWindSpeed": 5,
+            "avgWindDir": 274,
+            "score": 0.0,
+            "time": 1466690400000
         },
-        "2016-05-28T15:00:00.000+0000": {
-            "avgWindSpeed": 11,
-            "avgWindDir": 35,
-            "score": 0,
-            "time": 1464447600000
-        },
-        "2016-05-29T15:00:00.000+0000": {
-            "avgWindSpeed": 8,
-            "avgWindDir": 345,
-            "score": 0,
-            "time": 1464534000000
-        },
-        "2016-05-29T06:00:00.000+0000": {
-            "avgWindSpeed": 8,
-            "avgWindDir": 346,
-            "score": 0,
-            "time": 1464501600000
-        },
-        "2016-05-29T12:00:00.000+0000": {
-            "avgWindSpeed": 8,
-            "avgWindDir": 338,
-            "score": 0,
-            "time": 1464523200000
-        },
-        "2016-05-27T06:00:00.000+0000": {
-            "avgWindSpeed": 8,
-            "avgWindDir": 72,
-            "score": 0,
-            "time": 1464328800000
+        "2016-06-24T08:00:00.000+0000": {
+            "avgWindSpeed": 7,
+            "avgWindDir": 255,
+            "score": 0.0,
+            "time": 1466755200000
         }
     }
 }
