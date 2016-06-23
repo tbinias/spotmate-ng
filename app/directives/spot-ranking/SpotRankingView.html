@@ -8,7 +8,7 @@
 			<table>
 				<tr>
 					<td style="padding: 2px; border: 1px solid grey" align="center" ng-repeat="rank in value | orderBy:'time'" >
-						{{rank.time | date : 'HH' : 'UTC+2'}}h
+						{{rank.time | date : 'HH' : 'UTC'}}h
 					</td>
 				</tr>
 				<tr>
