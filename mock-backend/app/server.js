@@ -38,4 +38,10 @@ app.get('/resources/forecasts/weather/:provider/:location', function(req, res) {
   res.json(require('./forecasts/weather/' + provider + '/' + location + '.json'));
 });
 
+app.get('/resources/forecasts/tide/:provider/:location', function(req, res) {
+  var provider = req.params.provider;
+  var location = req.params.location;
+  res.json(require('./forecasts/tide/' + provider + '/' + location + '.json'));
+});
+
 app.listen(3000);
