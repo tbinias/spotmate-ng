@@ -10,7 +10,7 @@
 				<td class="forecast-label">Time</td>
 				<td class="forecast-value forecast-headline" align="center"
                     ng-repeat="forecast in value | orderBy:'time'" >
-					{{forecast.time | date : 'HH'}}h
+					{{forecast.time | date : 'HH' : 'UTC'}}h
 				</td>
 			</tr>
 			<tr>

@@ -21,7 +21,7 @@ class ForecastService {
                 var forecasts = self.$filter('orderBy')(result.forecasts, "time");
                 for (var i=0; i < forecasts.length; i++) {
                     var forecast = forecasts[i];
-                    forecast.day = self.$filter('date')(forecast.time,"EEE dd.MM");
+                    forecast.day = self.$filter('date')(forecast.time,"EEE dd.MM", "UTC");
                     weatherForecast.forecasts.push(forecast);
                     if (forecast.cloudCoverage != null && !weatherForecast.hasCloudCoverageInfo) {
                         weatherForecast.hasCloudCoverageInfo = true;
@@ -50,14 +50,14 @@ class ForecastService {
             var tide = null;
             for (var i=0; i < forecasts.length; i++) {
                 var forecast = forecasts[i];
-                var day = self.$filter('date')(forecast.time,"EEE dd.MM");
+                var day = self.$filter('date')(forecast.time,"EEE dd.MM", "UTC");
                 if (!tideForecast[day]) {
                     tideForecast[day] = {
                         x: [],
                         y: []
                     };
                 }
-                tideForecast[day].x.push(self.$filter('date')(forecast.time,"HH:mm"));
+                tideForecast[day].x.push(self.$filter('date')(forecast.time,"HH:mm", "UTC"));
                 tideForecast[day].y.push(forecast.tide);
             }
             defer.resolve(tideForecast);
