@@ -2,12 +2,12 @@ version: '2'
 services:
   spotmate:
     build: .
-    ports:
-      - "9090:80"
+    #ports:
+    #  - "9090:80"
     environment:
-      - BACKEND_URL=http://backend:3000
-    links:
-      - backend
+      - BACKEND_URL=http://backend:3000/resources
+    #links:
+    #  - backend
   backend:
     build: ./mock-backend
   testdevice:
@@ -16,5 +16,6 @@ services:
       - "4444:4444"
     environment:
       - TZ=Europe/Berlin
-    links:
-      - spotmate
+      - constraint:node==WX7R:WJ3F:XT6Q:YN52:PQZJ:L7AV:QSCT:I7K2:KV6S:V4JR:7DZK:UIAE
+    #links:
+    #  - spotmate

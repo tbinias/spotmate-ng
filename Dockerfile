@@ -1,7 +1,6 @@
-FROM joshix/caddy
-COPY ./build/dist/spotmate.js /var/www/html/
-COPY ./app/index.html /var/www/html/
-COPY ./app/index.html /var/www/html/
-COPY ./app/partials/ /var/www/html/partials/
+FROM httpd:2.4
+COPY ./build/dist/spotmate.js /usr/local/apache2/htdocs/
+COPY ./app/index.html /usr/local/apache2/htdocs/
+COPY ./app/partials/ /usr/local/apache2/htdocs/partials/
 COPY ./app/icons/ /var/www/html/icons/
-COPY caddy/Caddyfile /var/www/html/
+COPY ./apache/httpd.conf /usr/local/apache2/conf/
