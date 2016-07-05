@@ -14,5 +14,5 @@ node {
    step([$class: 'JUnitResultArchiver', testResults: 'reports/protractor/xml/*.xml'])
 
    stage 'Create artifacts'
-   archive 'Dockerfile, app/**/*, build/dist/**/*,caddy/**/*'
+   archive 'Dockerfile, app/**/*, build/dist/**/*,apache/**/*'
 }
