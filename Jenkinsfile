@@ -20,5 +20,5 @@ node {
    sh "docker push dockerreg.binias-online.de:5000/spotmate-ng:${env.BUILD_NUMBER}"
    
    stage 'Trigger deployment'
-   build job: 'spotmate-ng-infrastructure', parameters: [[$class: 'StringParameterValue', name: 'VERSION', value: '${env.BUILD_NUMBER}']], wait: false
+   build job: 'spotmate-ng-infrastructure', parameters: [[$class: 'StringParameterValue', name: 'VERSION', value: env.BUILD_NUMBER]], wait: false
 }
