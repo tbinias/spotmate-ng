@@ -14,11 +14,8 @@ node {
    step([$class: 'JUnitResultArchiver', testResults: 'reports/protractor/xml/*.xml'])
 
    stage 'Build docker image'
-   sh "docker build -t dockerreg.binias-online.de:5000/spotmate-ng:${BUILD_NUMBER} ."
+   sh "docker build -t dockerreg.binias-online.de:5000/spotmate-ng:${env.BUILD_NUMBER} ."
 
    stage 'Publish docker image'
-   sh "docker push dockerreg.binias-online.de:5000/spotmate-ng:${BUILD_NUMBER}"
-
-   //stage 'Create artifacts'
-   //archive 'Dockerfile, app/**/*, build/dist/**/*,apache/**/*'
+   sh "docker push dockerreg.binias-online.de:5000/spotmate-ng:${env.BUILD_NUMBER}"
 }
