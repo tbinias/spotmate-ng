@@ -11,20 +11,13 @@ module.exports = {
             filename: "[name].js"
         },
         devServer: {
+	    port: 8080,
             contentBase: "./app",
             proxy: {
-                /*
                 '/resources*': {
-                    target: 'https://spotmate.binias-online.de/spotmate',
-                    secure: false
-                },
-                '/spotmate/resources*': {
-                    target: 'https://spotmate.binias-online.de',
-                    secure: false
-                }*/
-                '/resources*': {
-                    target: 'http://localhost:3000',
-                    secure: false
+                    target: 'http://docker0.binias-online.de:9090/',
+                    secure: false,
+                    xfwd: true
                 }
             }
         },
