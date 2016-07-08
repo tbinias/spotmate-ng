@@ -2,7 +2,7 @@
 
 import app from '../SpotMateApp.es6';
 
-class FileReaderFactory {
+class FileReaderService {
 
     constructor($q) {
         this.$q = $q;
@@ -44,18 +44,15 @@ class FileReaderFactory {
     readAsDataUrl(file, scope) {
         var deferred = this.$q.defer();
 
-        var reader = this.getReader(deferred, scope);
-        reader.readAsDataURL(file);
+        if (file != null) {
+            var reader = this.getReader(deferred, scope);
+            reader.readAsDataURL(file);
+        } else {
+            deferred.reject();
+        }
 
         return deferred.promise;
     }
-
-    static createInstance($q) {
-        return {
-            readAsDataUrl: new FileReaderFactory($q).readAsDataUrl
-        }
-    }
-
 }
 
-app.factory("FileReader", [ "$q", FileReaderFactory.createInstance]);
+app.service("FileReaderService", [ "$q", FileReaderService]);

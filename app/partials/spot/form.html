@@ -1,5 +1,5 @@
 <script type="text/ng-template" id="locationTypeAheadTemplate.html">
-  <a>	  	      	  
+  <a>
       <span ng-bind="match.label"></span> | <span ng-bind="match.model.providerName"></span>
   </a>
 </script>
@@ -16,28 +16,28 @@
 			<div class="form-group">
 				<label class="col-sm-3 control-label">Map:</label>
 				<div class="col-sm-9">
-					<div ngf-drop ngf-select ng-model="vm.spot.mapImage" class="drop-box" 
+					<div ngf-drop ngf-select ng-model="vm.spot.mapImage" class="drop-box"
 	        			 ngf-drag-over-class="dragover" ngf-multiple="false" ngf-allow-dir="false"
-	        			 accept="image/*" style="min-height:50px">        			 
-	         			   <img class="drop-box-image" src="{{vm.mapImagePreview}}">
+	        			 accept="image/*" style="min-height:50px">
+	         			   <img class="drop-box-image" ng-src="{{vm.mapImagePreview}}">
 	        			   <span ng-hide="vm.mapImagePreview">drop image here</span>
 	        		</div>
         		</div>
-			</div>			
+			</div>
 			<div class="form-group">
 				<label for="locations" class="col-sm-3 control-label">Locations:</label>
 				<div class="col-sm-9">
-					<table>						
+					<table>
 						<tr ng-repeat="location in vm.spot.locations">
 							<td width="100%">{{location.name}} / {{location.providerName}}</td>
 							<td style="padding:2px"><a href="" class="btn btn-default" ng-click="removeLocation(location)"><span class="glyphicon glyphicon-remove"></span></a></td>
 						</tr>
 					</table>
-					<hr>					
-					<input type="text" ng-model="vm.selectLocation" placeholder="add location" 
-						   typeahead="location as location.name for location in searchLocations($viewValue)" 
+					<hr>
+					<input type="text" ng-model="vm.selectLocation" placeholder="add location"
+						   typeahead="location as location.name for location in searchLocations($viewValue)"
 						   typeahead-loading="loadingLocations"
-						   typeahead-template-url="locationTypeAheadTemplate.html" 
+						   typeahead-template-url="locationTypeAheadTemplate.html"
 						   typeahead-min-length="3"
 						   typeahead-on-select="addLocation($model)"
 						   class="form-control">
@@ -49,7 +49,7 @@
 			<div class="form-group" style="margin-top:10px">
 				<label for="windDirections" class="col-sm-3 control-label">Wind directions:</label>
 				<div class="col-sm-9">
-					<table>						
+					<table>
 						<tr ng-repeat="windDirection in vm.spot.windDirections">
 							<td width="100%">
 								<spotmate-circle-range-select class="circle-optimal-range" model="windDirection.value" readonly="false" bg-image="vm.mapImagePreview"></spotmate-circle-range-select>
@@ -58,25 +58,25 @@
 							<td><a href="" class="btn btn-default" ng-click="removeWindDirection($index)"><span class="glyphicon glyphicon-remove"></span></a></td>
 						</tr>
 					</table>
-					<hr>					
+					<hr>
 					<a href="" ng-click="addWindDirection()" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span>add wind direction</a>
 				</div>
 			</div>
 		</tab>
 	</tabset>
-	
+
 	<div class="form-group">
 		<hr>
 			<input type="submit" value="Save" class="btn btn-primary" ng-click="save()"/>
 			<button type="button" class="btn btn-default" ng-click="cancel()">
 	 			 <span class="glyphicon glyphicon-cancel"></span>Cancel
-			</button>			
+			</button>
 			<div style="float:right">
 				<button ng-show="vm.mode === 'edit'" type="button" class="btn btn-danger" ng-click="remove()">
 		 			 <span class="glyphicon glyphicon-remove"></span>Delete
-				</button>			
+				</button>
 			</div>
 			<div class="clearfix"></div>
-		</div>		
-	
+		</div>
+
 </form>

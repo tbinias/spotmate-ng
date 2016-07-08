@@ -1,10 +1,11 @@
 'use strict';
 
 import app from '../SpotMateApp.es6';
+import angular from 'angular';
 
 class SpotFormController {
 
-    constructor($rootScope, $scope, $http, $resource, $location, FileReader) {
+    constructor($rootScope, $scope, $http, $resource, $location, fileReaderService) {
 		$scope.vm = {
 				mode: "create",
 				spot: {
@@ -15,17 +16,12 @@ class SpotFormController {
 		};
 
 		$scope.$watch('vm.spot.mapImage', function (value) {
-			if (angular.isDefined(value)) {
-				console.log(value);
-				FileReader.readAsDataUrl(value, $scope)
-                .then(function(result) {
-                	$scope.vm.mapImagePreview = result;
-                });
+			if (value != null && angular.isDefined(value)) {
+				fileReaderService.readAsDataUrl(value, $scope)
+                    .then(function(result) {
+                	       $scope.vm.mapImagePreview = result;
+                    });
 			}
-
-	        if ($scope.vm.upload.mapImage != null) {
-	            $scope.uploadMapImage($scope.vm.upload.mapImage);
-	        }
 	    });
 
 		if (angular.isDefined($scope.model)) {
@@ -34,7 +30,7 @@ class SpotFormController {
 				$scope.vm.spot.name = spot.name;
 				$scope.vm.spot.id = spot.id;
 				$scope.vm.mapImagePreview = spot._links['map'].href.replace("https://", "//");
-				//console.log(spot);
+
 				var locations = spot._embedded.locations;
 				if (locations) {
 					for (var i=0; i < locations.length; i++) {
@@ -92,8 +88,6 @@ class SpotFormController {
 
 			var spot = $scope.vm.spot;
 
-			console.log(spot);
-
 			if (spot && spot.name) {
 				var spotDTO = {
 						name: spot.name,
@@ -120,9 +114,6 @@ class SpotFormController {
 					}
 				}
 
-				console.log(spotDTO);
-
-
 				if (spotDTO.id) {
 					$rootScope.globalVM.promise = $resource("resources/spots/:spotId", null, { update: {method: 'PUT'} }).update({ spotId: spotDTO.id }, spotDTO, function(spot) {
 
@@ -135,9 +126,6 @@ class SpotFormController {
 					        })
 					        .success(function(response){
 					        	$location.path("/spot/" + spot.id);
-					        })
-					        .error(function(response){
-					        	console.log(response);
 					        });
 						} else {
 							$location.path("/spot/" + spot.id);
@@ -154,9 +142,6 @@ class SpotFormController {
 					        })
 					        .success(function(response){
 					        	$location.path("/spot/" + spot.id);
-					        })
-					        .error(function(response){
-					        	console.log(response);
 					        });
 						} else {
 							$location.path("/spot/" + spot.id);
@@ -188,22 +173,8 @@ class SpotFormController {
 			}
 		}
 
-		$scope.uploadMapImage = function(file) {
-//			var fd = new FormData();
-//	        fd.append('file', file);
-//	        $http.post("resources/spots/" + $scope.vm.spot.id + "/images/map", fd, {
-//	            transformRequest: angular.identity,
-//	            headers: {'Content-Type': undefined}
-//	        })
-//	        .success(function(response){
-//	        	console.log(response);
-//	        })
-//	        .error(function(response){
-//	        	console.log(response);
-//	        });
-	    }
 	}
 }
 
 app.controller("SpotFormController", [ '$rootScope', '$scope', '$http', '$resource',
-    '$location', 'FileReader', SpotFormController]);
+    '$location', 'FileReaderService', SpotFormController]);
